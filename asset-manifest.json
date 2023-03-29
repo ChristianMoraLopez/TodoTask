@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ChristianMoraLopez/TodoTask/static/css/main.bc1f3ced.css",
+    "main.js": "/ChristianMoraLopez/TodoTask/static/js/main.da7aff46.js",
+    "index.html": "/ChristianMoraLopez/TodoTask/index.html",
+    "main.bc1f3ced.css.map": "/ChristianMoraLopez/TodoTask/static/css/main.bc1f3ced.css.map",
+    "main.da7aff46.js.map": "/ChristianMoraLopez/TodoTask/static/js/main.da7aff46.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc1f3ced.css",
+    "static/js/main.da7aff46.js"
+  ]
+}
