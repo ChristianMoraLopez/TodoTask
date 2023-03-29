@@ -1,70 +1,114 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![TaskAppImage](https://media.discordapp.net/attachments/1008571074981658694/1090663183267659838/image.png?width=1276&height=632 "TaskAppImage")](https://media.discordapp.net/attachments/1008571074981658694/1090663183267659838/image.png?width=1276&height=632 "TaskAppImage")
 
-## Available Scripts
+# TaskManager App
+Esta es una aplicación desarrollada en React que permite gestionar tareas. La aplicación muestra una lista de tareas pendientes y permite marcarlas como completadas. Además, cuenta con una barra de búsqueda para filtrar las tareas por texto.
 
-In the project directory, you can run:
+## Cómo ejecutar la aplicación
+Para ejecutar la aplicación, primero es necesario instalar las dependencias usando npm. En una terminal, dentro del directorio de la aplicación, ejecutar el siguiente comando:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Una vez instaladas las dependencias, se puede ejecutar la aplicación con el siguiente comando:
 
-### `npm test`
+`npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La aplicación estará disponible en el navegador en la dirección http://localhost:3000/
 
-### `npm run build`
+## Estructura de la aplicación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La aplicación está compuesta por varios componentes:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- TodoCounter: muestra la cantidad total de tareas y la cantidad de tareas completadas.
+- TodoSearch: permite buscar tareas por texto.
+- TodoList: componente contenedor de la lista de tareas.
+- TodoItem: componente que muestra una tarea individual.
+- CreateTodoButton: botón para agregar nuevas tareas.
+- App: componente principal que une todos los componentes y muestra la aplicación en pantalla.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Además, la aplicación hace uso del archivo index.css para dar estilo a los componentes.
 
-### `npm run eject`
+El archivo index.html contiene el esqueleto de la página y carga la aplicación en el elemento con el id root.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estilización.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se está haciendo uso del framework de CSS Tailwind para la estilización de esta aplicación. En el código, se puede ver que se han utilizado clases de Tailwind como "bg-gradient-to-r", "from-bluebg", "to-skinbg", "rounded-xl", "shadow-lg", "space-x-6", "space-y-4", "flex-grow", "p-6", "mt-16", "mb-16", "min-w-lg", "max-w-max", "mx-auto", "justify-center", "mt-4", y otras más.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tailwind es una herramienta muy útil para estilizar aplicaciones web de manera rápida y sencilla, ya que proporciona un conjunto de clases predefinidas que se pueden aplicar directamente a los elementos HTML sin tener que escribir CSS personalizado. Además, Tailwind es altamente personalizable, lo que significa que se pueden crear clases personalizadas para adaptarse a las necesidades específicas de una aplicación.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Funcionamiento de la aplicación
 
-## Learn More
+La aplicación muestra una lista de tareas pendientes, representadas por objetos con las propiedades text y completed. La propiedad text contiene el contenido de la tarea y la propiedad completed indica si la tarea ha sido completada o no.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Las tareas se muestran en el componente TodoList a través del uso del método map(), que itera sobre el array de tareas y genera un componente TodoItem por cada tarea.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+El componente TodoSearch permite buscar tareas por texto. Al escribir en el campo de búsqueda, se actualiza la lista de tareas mostrando solamente aquellas que coinciden con el texto ingresado.
 
-### Code Splitting
+El botón CreateTodoButton permite agregar nuevas tareas a la lista.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+El componente TodoCounter muestra la cantidad total de tareas y la cantidad de tareas completadas.
 
-### Analyzing the Bundle Size
+El estado de la aplicación se maneja en el componente App, que contiene el array de tareas y se encarga de actualizarlo cuando se agregan nuevas tareas o se marcan como completadas.
+## Créditos
+Esta aplicación fue desarrollada por Christian Mora. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### # README IN ENGLISH
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+------------
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# TaskManager App
+This is a React application that allows you to manage tasks. The app displays a list of pending tasks and allows you to mark them as completed. It also includes a search bar to filter tasks by text.
 
-### `npm run build` fails to minify
+## How to run the app
+To run the app, you first need to install the dependencies using npm. In a terminal, within the application directory, run the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+`npm install`
+
+Once the dependencies are installed, you can run the app with the following command:
+
+
+`npm start`
+
+The app will be available in the browser at http://localhost:3000/
+
+## App structure
+The app is composed of several components:
+
+- TodoCounter: displays the total number of tasks and the number of completed tasks.
+- TodoSearch: allows you to search for tasks by text.
+- TodoList: container component for the list of tasks.
+- TodoItem: component that displays an individual task.
+- CreateTodoButton: button to add new tasks.
+- App: main component that combines all components and displays the app on the screen.
+In addition, the app uses the index.css file to style the components.
+
+The index.html file contains the skeleton of the page and loads the app into the element with the id "root".
+
+## Styling
+
+We are using the Tailwind CSS framework for the styling of this app. In the code, you can see that Tailwind classes such as "bg-gradient-to-r", "from-bluebg", "to-skinbg", "rounded-xl", "shadow-lg", "space-x-6", "space-y-4", "flex-grow", "p-6", "mt-16", "mb-16", "min-w-lg", "max-w-max", "mx-auto", "justify-center", "mt-4", and others have been used.
+
+Tailwind is a very useful tool for styling web applications quickly and easily, as it provides a set of predefined classes that can be applied directly to HTML elements without having to write custom CSS. Additionally, Tailwind is highly customizable, meaning that custom classes can be created to fit the specific needs of an application.
+
+## App functionality
+The app displays a list of pending tasks, represented by objects with the properties "text" and "completed". The "text" property contains the content of the task and the "completed" property indicates whether the task has been completed or not.
+
+The tasks are displayed in the TodoList component through the use of the "map()" method, which iterates over the array of tasks and generates a TodoItem component for each task.
+
+The TodoSearch component allows you to search for tasks by text. As you type in the search field, the list of tasks is updated to show only those that match the entered text.
+
+The CreateTodoButton component allows you to add new tasks to the list.
+
+The TodoCounter component displays the total number of tasks and the number of completed tasks.
+
+The state of the app is managed in the App component, which contains the array of tasks and is responsible for updating it when new tasks are added or marked as completed.
+
+## Credits
+This app was developed by Christian Mora. 
