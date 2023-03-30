@@ -96,8 +96,8 @@ function App() {
 
   return (
  <React.Fragment>
- <div className=' min-h-full w-screen flex'>
-  <div className="container mx-auto p-6 mt-16 mb-16 max-w-screen-2xl  justify-center bg-gradient-to-r from-bluebg to-skinbg rounded-xl shadow-lg space-x-6 space-y-4 flex-grow">
+ <div className=' min-h-full  flex'>
+  <div className="container mx-auto p-6 sm:mx-16 mx-1.5 mt-16 mb-16 max-w-screen-2xl  justify-center bg-gradient-to-r from-bluebg to-skinbg rounded-xl shadow-lg space-x-6 space-y-4 flex-grow">
  
  <div className="mt-4  ">
 
@@ -109,7 +109,7 @@ function App() {
  </div>
  <div className='object-none  object-left-top '>
 
- <div className=" justify-center  flex flex-col">
+ <div className=" justify-center  flex flex-col min-w-full ">
 
     <TodoSearch
       searchValue={searchValue}

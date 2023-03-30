@@ -24,7 +24,7 @@ function CreateTodoButton(props) {
         }}
        >
         
-        <input  type="text" placeholder="Agrega una nueva tarea" id= "agregarTarea"className=" rounded-lg border border-purple text-center font-semibold mr-4 pl-4 pr-4 " 
+        <input  type="text" placeholder="Agrega una nueva tarea" id= "agregarTarea" className=" w-80  rounded-lg border border-purple text-center font-semibold mr-4 pl-4 pr-4 " 
             autocomplete="off" 
         />
         

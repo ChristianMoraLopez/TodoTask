@@ -12,7 +12,7 @@ function TodoSearch({searchValue, setSearchValue}) {
 
     <input 
     placeholder="Buscar" 
-    className="  rounded-lg border   border-purple text-center font-semibold"
+    className="  rounded-lg border border-purple text-center font-semibold"
     onChange = {onSearchValueChange}
     value= {searchValue}
     />
