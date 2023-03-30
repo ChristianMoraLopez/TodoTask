@@ -4,14 +4,14 @@ import "./index.css";
 
 
 
-function TodoCounter() {
+function TodoCounter({total, completed} ) {
   return (
     <div className="text-center ">
   <h className="text-blueskydark text-opacity-0 bg-gradient-to-tr from-gray-dark to-blue bg-clip-text  text-4xl font-black">
     Tus Tareas
   </h>
   <p className=" font-semibold mt-4 ">
-    Has completado 2 de 3 tareas
+    Has completado { completed } de {total} tareas 
   </p>
 </div>
 
