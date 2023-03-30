@@ -1,7 +1,7 @@
 {
   "name": "minetodo",
   "version": "0.1.0",
-  "homepage": "https://github.com/ChristianMoraLopez/TodoTask",
+  "homepage": "https://christianmoralopez.github.io/minetodo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
