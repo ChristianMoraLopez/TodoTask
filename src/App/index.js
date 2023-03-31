@@ -1,13 +1,13 @@
 
 import React from 'react';
-import {TodoCounter} from './TodoCounter';
-import {TodoSearch} from './TodoSearch';
-import {TodoList} from './TodoList';
-import {TodoItem} from './TodoItem';
-import {CreateTodoButton} from './CreateTodoButton';
+import {TodoCounter} from '../TodoCounter';
+import {TodoSearch} from '../TodoSearch';
+import {TodoList} from '../TodoList';
+import {TodoItem} from '../TodoItem';
+import {CreateTodoButton} from '../CreateTodoButton';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import "./index.css";
-//import './App.css';
+import "../index.css";
+
 
 //const url = 'https://drive.google.com/uc?export=view&id=13t4dDip-NhgJxn-bzPUBSKsOARI1lQZX';
 

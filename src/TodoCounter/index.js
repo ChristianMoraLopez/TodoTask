@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "../index.css";
 
 
 
@@ -10,7 +10,7 @@ function TodoCounter({total, completed} ) {
   <h className="text-blueskydark text-opacity-0 bg-gradient-to-tr from-gray-dark to-blue bg-clip-text  text-4xl font-black">
     Tus Tareas
   </h>
-  <p className=" font-semibold mt-4 ">
+  <p className="font-bold mt-4 " >
     Has completado { completed } de {total} tareas 
   </p>
 </div>

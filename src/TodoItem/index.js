@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "../index.css";
 
 function TodoItem(props ) {
 
@@ -23,10 +23,10 @@ function TodoItem(props ) {
    
     };
 
-
+// hover:scale-110
 
     return (
-        <li className="TodoItem p-8 hover:scale-110 hover:shadow-lg border min-h-fit border-ocean border-opacity-20 mb-4  mx-auto text-left rounded-xl shadow-2xl space-x-6  flex items-center">
+        <li className="TodoItem p-8  hover:shadow-lg border min-h-fit border-ocean border-opacity-20 mb-4  mx-auto text-left rounded-xl shadow-2xl space-x-6  flex items-center">
           {props.completed ? (
             <div className="border border-2 rounded-full hover:bg-gray  hover:bg-opacity-50"
             
