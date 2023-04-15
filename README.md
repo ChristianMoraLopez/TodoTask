@@ -2,19 +2,21 @@
 [![TaskAppImage](https://media.discordapp.net/attachments/1008571074981658694/1090663183267659838/image.png?width=1276&height=632 "TaskAppImage")](https://media.discordapp.net/attachments/1008571074981658694/1090663183267659838/image.png?width=1276&height=632 "TaskAppImage")
 
 # TaskManager App
-Esta es una aplicación desarrollada en React que permite gestionar tareas. La aplicación muestra una lista de tareas pendientes y permite marcarlas como completadas. Además, cuenta con una barra de búsqueda para filtrar las tareas por texto.
+Este es un gestor de tareas sencillo creado con React que permite al usuario agregar, completar, descompletar y eliminar tareas. La aplicación es completamente funcional y utiliza el almacenamiento local para guardar las tareas del usuario. La aplicación está desplegada en los siguientes enlaces:
 
-## Cómo ejecutar la aplicación
-Para ejecutar la aplicación, primero es necesario instalar las dependencias usando npm. En una terminal, dentro del directorio de la aplicación, ejecutar el siguiente comando:
+- taskmanager-git-main-christianmoralopez.vercel.app
+- taskmanager-self.vercel.app
+- taskmanager-christianmoralopez.vercel.app
 
+## Funcionalidad
+La aplicación permite al usuario realizar las siguientes acciones:
 
-`npm install`
+- Agregar tareas
+- Completar tareas
+- Descompletar tareas
+- Eliminar tareas
+- Filtrar tareas por texto
 
-Una vez instaladas las dependencias, se puede ejecutar la aplicación con el siguiente comando:
-
-`npm start`
-
-La aplicación estará disponible en el navegador en la dirección http://localhost:3000/
 
 ## Estructura de la aplicación
 
@@ -63,20 +65,11 @@ Esta aplicación fue desarrollada por Christian Mora.
 
 
 # TaskManager App
-This is a React application that allows you to manage tasks. The app displays a list of pending tasks and allows you to mark them as completed. It also includes a search bar to filter tasks by text.
+This is a simple task manager created with React that allows the user to add, complete, uncomplete, and delete tasks. The application is fully functional and uses local storage to save the user's tasks. The application is deployed at the following links:
 
-## How to run the app
-To run the app, you first need to install the dependencies using npm. In a terminal, within the application directory, run the following command:
-
-
-`npm install`
-
-Once the dependencies are installed, you can run the app with the following command:
-
-
-`npm start`
-
-The app will be available in the browser at http://localhost:3000/
+- taskmanager-git-main-christianmoralopez.vercel.app
+- taskmanager-self.vercel.app
+- taskmanager-christianmoralopez.vercel.app
 
 ## App structure
 The app is composed of several components:
