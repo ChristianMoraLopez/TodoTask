@@ -1,24 +1,19 @@
 
 import React from 'react';
-import {TodoCounter} from '../TodoCounter';
-import {TodoSearch} from '../TodoSearch';
-import {TodoList} from '../TodoList';
-import {TodoItem} from '../TodoItem';
-import {CreateTodoButton} from '../CreateTodoButton';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { AppUI } from './appUI';
 import "../index.css";
 
 
 //const url = 'https://drive.google.com/uc?export=view&id=13t4dDip-NhgJxn-bzPUBSKsOARI1lQZX';
 
-const defaultTodos = [
-  { text: 'Leer', completed: true },
-  { text: 'Escribir', completed: true },
-  { text: 'Correr', completed: false },
+// const defaultTodos = [
+//   { text: 'Leer', completed: true },
+//   { text: 'Escribir', completed: true },
+//   { text: 'Correr', completed: false },
 
 
 
-];
+// ];
 
 /*El array "todos" es un conjunto de tres objetos, cada uno de los cuales tiene dos propiedades: "text" y "completed".
 
@@ -27,10 +22,25 @@ La propiedad "text" representa el contenido de la tarea que se debe realizar y e
 La propiedad "completed" indica si la tarea ha sido completada o no, y es un valor booleano (true o false). Si el valor es true, la tarea se ha completado; si es false, la tarea está pendiente.*/
 
 function App() {
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
+  let parsedTodos;
+  
+  if (!localStorageTodos || localStorageTodos === "[]") {
+    parsedTodos = [{ text: 'Hacer una lista', completed: false }];
+    localStorage.setItem('TODOS_V1', JSON.stringify(parsedTodos));
+  } else {
+    parsedTodos = JSON.parse(localStorageTodos);
+  }
+
+
+
   const [searchValue, setSearchValue] = React.useState('');
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, setTodos] = React.useState(parsedTodos);
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+
+
+
   //Comparar serchValue con el texto de cada todo
   //Si el texto del todo incluye el searchValue, entonces ese todo debe ser mostrado
   //Si no incluye el searchValue, entonces ese todo no debe ser mostrado
@@ -45,6 +55,14 @@ function App() {
     });
   }
 
+
+  const saveTodos = (newTodos) => {
+    const stringifiedTodos = JSON.stringify(newTodos);
+    localStorage.setItem('TODOS_V1', stringifiedTodos);
+    setTodos(newTodos);
+  };
+
+
   const completeTodo = (text) => {
     const newTodos = todos.map(todo => {
       if (todo.text === text) {
@@ -56,7 +74,7 @@ function App() {
         return todo;
       }
     });
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   
@@ -71,14 +89,14 @@ function App() {
         return todo;
       }
     });
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   const deleteTodo = (text) => {
     const indexTodo = todos.findIndex(todo => todo.text === text);
     const newTodos = [...todos];
     newTodos.splice(indexTodo, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
   
 
@@ -89,76 +107,24 @@ function App() {
       text,
       completed: false
     });
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   
 
   return (
- <React.Fragment>
- <div className=' min-h-full  flex'>
-  <div className="container mx-auto p-6 sm:mx-16 mx-1.5 mt-16 mb-16 max-w-screen-2xl  justify-center bg-gradient-to-r from-bluebg to-skinbg rounded-xl shadow-lg space-x-6 space-y-4 flex-grow">
- 
- <div className="mt-4  ">
-
-   <TodoCounter
-      total={totalTodos}
-      completed={completedTodos}
-
-   />
- </div>
- <div className='object-none  object-left-top '>
-
- <div className=" justify-center  flex flex-col min-w-full ">
-
-    <TodoSearch
+    <AppUI
+      totalTodos={totalTodos}
+      completedTodos={completedTodos}
       searchValue={searchValue}
       setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      completeTodo={completeTodo}
+      unCompleteTodo={unCompleteTodo}
+      deleteTodo={deleteTodo}
+      addTodo={addTodo}
       
     />
-  </div>
-
- </div>
- 
-
-
- <TodoList>
-  <TransitionGroup>
-    { 
-      searchedTodos.map(todo => (
-        <CSSTransition
-          key={todo.text}
-          timeout={300}
-          classNames="todo"
-        >
-          <TodoItem
-             text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onUnComplete={() => unCompleteTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-           
-          />  
-        </CSSTransition>
-      ))
-    }
-  </TransitionGroup>
-</TodoList>
-      
-   
-
-            <CreateTodoButton
-              onCreate={addTodo}
-            />
-      
-
-        
-  </div>
-
-
- </div>
-
- </React.Fragment>
   );
 }
 
